@@ -3,8 +3,12 @@ require_relative 'array_list'
 describe ArrayList do
 	let(:new_list) { ArrayList.new(3) }
 
-
 	# test for ArrayList.new(size)
+	describe "array list size" do
+		it "should have an initial size when a new object is made" do
+			expect(new_list.length).to eq(3)
+		end
+	end
 
 	# test for ArrayList.add(element)
 
