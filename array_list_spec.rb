@@ -21,8 +21,10 @@ describe ArrayList do
 		end
 
 		# test for ArrayList.set(element, index)
-
-		# test for ArrayList.length
+		it "should assign new values to a given index" do
+			new_list.set("this is index one", 1)
+			expect(new_list.get(1)).to eq("this is index one")
+		end
 	end
 end
 

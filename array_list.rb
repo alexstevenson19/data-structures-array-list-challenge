@@ -15,6 +15,7 @@ class ArrayList
 	end
 
 	def set(element, index)
+		@array_list.array[index] = element
 	end
 
 	def length
@@ -22,11 +23,6 @@ class ArrayList
 	end
 
 end
-
-
-
-
-
 
 
 
