@@ -6,12 +6,12 @@ describe ArrayList do
 	describe "array list" do
 
 		it "should have an initial size when a new object is made" do
-			expect(new_list.length).to eq(3)
+			expect(new_list.size).to eq(3)
 		end
 	
 		it "should add elements to the array" do
 			new_list.add("string")
-			expect(new_list.length).to eq(4)
+			expect(new_list.size).to eq(4)
 		end
 
 		it "should retrieve the elemnt at a given index" do

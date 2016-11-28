@@ -11,7 +11,7 @@ class ArrayList
 	end
 
 	def get(index)
-		if index > self.length
+		if index > self.size
 			raise RangeError, "out of bounds"
 		else
 			@array_list.array[index]
@@ -27,14 +27,14 @@ class ArrayList
 	end
 
 	def insert(index, element)
-		if index > self.length.to_i + 1
+		if index > self.size.to_i + 1
 			raise RangeError, "out of bounds"
 		else
 			@array_list.array.insert(index, element)
 		end
 	end
 
-	def length
+	def size
 		@array_list.array.length
 	end
 
