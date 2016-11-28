@@ -20,9 +20,17 @@ class ArrayList
 
 	def set(index, element)
 		if element == nil
-			raise StandardError, "element doesn't exist"
+			raise RangeError, "element doesn't exist"
 		else
 			@array_list.array[index] = element
+		end
+	end
+
+	def insert(index, element)
+		if index > self.length.to_i + 1
+			raise RangeError, "out of bounds"
+		else
+			@array_list.array.insert(index, element)
 		end
 	end
 
