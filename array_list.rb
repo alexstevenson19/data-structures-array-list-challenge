@@ -7,9 +7,11 @@ class ArrayList
 	end
 
 	def add(element)
+		@array_list.array.push(element)
 	end
 
 	def get(index)
+		@array_list.array[index]
 	end
 
 	def set(element, index)
