@@ -11,11 +11,19 @@ class ArrayList
 	end
 
 	def get(index)
-		@array_list.array[index]
+		if index > self.length
+			raise RangeError, "out of bounds"
+		else
+			@array_list.array[index]
+		end
 	end
 
-	def set(element, index)
-		@array_list.array[index] = element
+	def set(index, element)
+		if element == nil
+			raise StandardError, "element doesn't exist"
+		else
+			@array_list.array[index] = element
+		end
 	end
 
 	def length

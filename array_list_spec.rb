@@ -20,25 +20,19 @@ describe ArrayList do
 			expect(new_list.get(3)).to eq("new element")
 		end
 
+		it "should throw an error when a given index isn't in the array" do
+			expect{new_list.get(4)}.to raise_error(RangeError)
+		end		
+
 		# test for ArrayList.set(element, index)
 		it "should assign new values to a given index" do
-			new_list.set("this is index one", 1)
+			new_list.set(1, "this is index one")
 			expect(new_list.get(1)).to eq("this is index one")
 		end
+
+		it "should throw an error when an element doesn't exist" do
+			expect{new_list.set(1)}.to raise_error(StandardError)
+		end				
 	end
 end
 
-
-
-	# let(:new_array) { FixedArray.new(3) }
-
-	# describe "fixed array size" do
-	# 	it "should have a set length" do
-	# 		# p new_array.array.length
-	# 		expect(new_array.array.length).to eq(3)
-	# 	end
-
-	# 	it "should not be a different length" do
-	# 		expect(new_array.array.length).not_to eq(4)
-	# 	end
-	# end
